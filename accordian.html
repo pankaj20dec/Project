@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Accordian</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+  <div class="main-container">
+		<div class="accordian">
+			<div class="box">
+				<h3 class="section"><a href="javascript:void(0);" class="link">Section1</a></h3>
+				<div class="details first">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+				<h3 class="section"><a href="javascript:void(0);" class="link">Section2</a></h3>
+				<div class="details">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+				<h3 class="section"><a href="javascript:void(0);" class="link">Section3</a></h3>
+				<div class="details">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+				<h3 class="section"><a href="javascript:void(0);" class="link">Section4</a></h3>
+				<div class="details">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+				<h3 class="section"><a href="javascript:void(0);" class="link">Section5</a></h3>
+				<div class="details">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+			</div>
+		</div>
+   </div>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+		$('.section a').click(function(){
+			var parent = $(this).parent();
+			$('.details').removeClass('active').slideUp();
+			if(parent.next('.details').hasClass('active')){
+				parent.next('.details').removeClass('active').slideUp();
+			}else{
+				parent.next('.details').addClass('active').slideDown();
+			}
+		});
+    });
+	
+</script>
+</body>
+</html>
